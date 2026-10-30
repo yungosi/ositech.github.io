@@ -1,0 +1,163 @@
+ body{
+    padding: 0;
+    background-color: var(--background-color);
+    box-sizing: border-box;
+}
+*{
+    padding: 0px;
+    margin: 0;
+}
+:root{
+    --background-color: #000000;
+    --animation-color:#00ffff;
+    --neon-color:#030057;
+    --font-color:#ffff;
+    --light-color:#cececebb;
+    --dark-color:#0B0B0B;
+}
+.nav{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: var(--dark-color);
+
+}
+#nav-logo{
+    padding: 13px 20px;
+    color: var(--font-color);
+    font-size: 24px;
+    font-family: 'Snap ITC';
+    font-weight: 500;
+}
+#nav-logo span{
+    color: var(--animation-color);
+    font-size: 30px;
+}
+.nav-bar-link{
+    display: flex;
+    list-style: none;
+    padding: 5px 40px;
+}
+.nav-bar-link a{
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+}
+#hover{
+    padding: 6px;
+}
+
+#hover a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    /* left: 12px; */
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--animation-color);
+    transition: 0.3s;
+}
+#hover a:hover::after{
+    width: 100%;
+}
+/* front-container *************************************/
+.front-view{
+    display: flex;
+    padding: 20px;
+    margin-top: 5rem;
+    justify-content:space-between;
+    color: var(--font-color);
+    /* background-color: red; */
+    height: inherit;
+    
+}
+#front-text{
+    width: 45%;
+    padding: 10px;
+}
+#front-text h2{
+    font-size: 24px;
+    word-spacing: 5px;
+    padding: 10px 0px;
+}
+#front-text h2 span{
+    color: var(--animation-color);
+    font-size: 28px;
+    font-family: 'Arial Black';
+}
+#front-text h3{
+    padding: 15px 0px;
+    font-size: 18px;
+}
+#front-text p{
+    font-size: 14px;
+    color: var(--light-color);
+}
+#front-image{
+    width: 45vh;
+    height: 55vh;
+    background-image: url(Snapchat-1042748200.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: inset 0px -20px 20px 0px var(--animation-color);
+    margin-right: 8rem;
+}
+.front-button{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    padding: 25px;
+    margin-top: -7rem;
+}
+.front-button .btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    background-color: var(--animation-color);
+    color:var(--dark-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.6s;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px 0px var(--animation-color);
+    position: relative;overflow: hidden;
+    z-index: 1;
+}
+a.btn:hover{
+    color: var(--animation-color);
+}
+a.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-color);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: 0.4s;
+}
+a.btn:hover::before{
+    width: 100%;
+}
+a.btn:nth-child(2){
+    background: var(--dark-color);
+    color: var(--animation-color);
+}
+a.btn:nth-child(2):hover{
+    color: var(--dark-color);
+}
+a.btn:nth-child(2)::before{
+    background: var(--animation-color);
+}
